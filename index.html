@@ -1,33 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000000;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prince Idris </title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="images/git.png">
+.line1 {
+  display: block;
+  border: none;
+  outline: none;
+  height: 33px;
+  width: 1000px;
+  background: #ffee00de;
+  position: fixed;
+  top: 42%;
+  left: 0;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(255, 255, 255, 0.178);
+  opacity: 0;
+  animation: line1 1s linear forwards;
+  animation-delay: 2s;
+}
 
-</head>
+.line2 {
+  display: block;
+  border: none;
+  outline: none;
+  height: 33px;
+  width: 900px;
+  background: #f80707a4;
+  position: fixed;
+  top: 52%;
+  right: 0;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(255, 255, 255, 0.178);
+  animation: line2 1s linear forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
 
-<body>
+.social-links img {
+  z-index: 10;
+  margin: 1rem;
+  padding: 0.5rem;
+  width: 1.6rem;
+}
 
-    <div class="lines">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-    </div>
+.social-links img:hover {
+  background-color: #d3212d85;
+  background-image: linear-gradient(
+    319deg,
+    #d3212d 10%,
+    #ffbf00 30%,
+    #009245 100%
+  );
+  padding: 5px;
+  transition: all 0.3s ease-out;
+  transform-origin: bottom;
+  transform: scale(2);
+  cursor: crosshair;
+  border-radius: 50%;
+}
 
-    <div class="social-links">
-        <a href="https://twitter.com/idristrades" target="_blank"><img src="images/tw.png" alt=""></a>
-        <a href="https://github.com/Gualdjouma" target="_blank"><img src="images/git.png" alt=""></a>
-        <a href="#" target="_blank"><img src="images/disc.png" alt=""></a>
-        <a href="https://instagram.com/idris.yyz" target="_blank"><img src="images/ig.png" alt=""></a>
-        <a href="https://flickr.com/gualdjouma" target="_blank"><img src="images/fl.png" alt=""></a>
+.social-links {
+  display: grid;
+  place-content: center;
+  background-color: #03e779de;
+  height: 100vh;
+  width: 35px;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 44%;
+  position: fixed;
+  opacity: 0;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(255, 255, 255, 0.178);
+  animation: socialicons 0.5s linear forwards;
+  animation-delay: 0.5s;
+}
 
-    </div>
+@keyframes socialicons {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
 
-</body>
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 
-</html>
+@keyframes line1 {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes line2 {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
